@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Block {
 
 	private int point;
@@ -8,144 +10,107 @@ public class Block {
 	private int employedPopulation;
 	private int wealth;
 	private int blockID;
+	private int lastBlock;
 	private boolean isDefeding;
-	private ArrayList Building;
+	private ArrayList<Building> buildings = new ArrayList<Building>();
 	private int lastBuliding;
 
-	public void getPoint() {
-		// TODO - implement Block.getPoint
-		throw new UnsupportedOperationException();
+	public int getPoint() {
+		return point;
 	}
 
-	/**
-	 * 
-	 * @param point
-	 */
+
 	public void setPoint(int point) {
 		this.point = point;
 	}
 
-	public void getPopulation() {
-		// TODO - implement Block.getPopulation
-		throw new UnsupportedOperationException();
+	public int getPopulation() {
+		return population;
 	}
 
-	/**
-	 * 
-	 * @param population
-	 */
 	public void setPopulation(int population) {
 		this.population = population;
 	}
 
-	public void getAttackPower() {
-		// TODO - implement Block.getAttackPower
-		throw new UnsupportedOperationException();
+	public int getAttackPower()
+	{
+		return attackPower;
 	}
-
-	/**
-	 * 
-	 * @param attackPower
-	 */
 	public void setAttackPower(int attackPower) {
 		this.attackPower = attackPower;
 	}
 
-	public void getDefensePower() {
-		// TODO - implement Block.getDefensePower
-		throw new UnsupportedOperationException();
+	public int getDefensePower() {
+		return defensePower;
 	}
 
-	/**
-	 * 
-	 * @param defensePower
-	 */
+
 	public void setDefensePower(int defensePower) {
 		this.defensePower = defensePower;
 	}
 
-	public void getUnemployedPopulation() {
-		// TODO - implement Block.getUnemployedPopulation
-		throw new UnsupportedOperationException();
+	public int getUnemployedPopulation() {
+		return unemployedPopulation;
 	}
 
-	/**
-	 * 
-	 * @param unemployedPopulation
-	 */
+
 	public void setUnemployedPopulation(int unemployedPopulation) {
 		this.unemployedPopulation = unemployedPopulation;
 	}
 
-	public void getEmployedPopulation() {
-		// TODO - implement Block.getEmployedPopulation
-		throw new UnsupportedOperationException();
+	public int getEmployedPopulation() {
+	return 	employedPopulation;
 	}
 
-	/**
-	 * 
-	 * @param employedPopulation
-	 */
+
 	public void setEmployedPopulation(int employedPopulation) {
 		this.employedPopulation = employedPopulation;
 	}
 
-	public void getWealth() {
-		// TODO - implement Block.getWealth
-		throw new UnsupportedOperationException();
+	public int getWealth() {
+		return wealth;
 	}
 
-	/**
-	 * 
-	 * @param wealth
-	 */
 	public void setWealth(int wealth) {
 		this.wealth = wealth;
 	}
 
-	public void getBlockID() {
-		// TODO - implement Block.getBlockID
-		throw new UnsupportedOperationException();
+	public int getBlockID() {
+		return blockID;
 	}
 
-	/**
-	 * 
-	 * @param blockID
-	 */
+
 	public void setBlockID(int blockID) {
 		this.blockID = blockID;
 	}
 
-	public void getIsDefeding() {
-		// TODO - implement Block.getIsDefeding
-		throw new UnsupportedOperationException();
+	public Boolean getIsDefeding() {
+		return isDefeding;
 	}
 
-	/**
-	 * 
-	 * @param isDefeding
-	 */
-	public void setIsDefeding(int isDefeding) {
-		// TODO - implement Block.setIsDefeding
-		throw new UnsupportedOperationException();
+
+	public void setIsDefeding(Boolean isDefeding) {
+		this.isDefeding = isDefeding;
 	}
 
-	/**
-	 * 
-	 * @param Building
-	 */
-	public void add(int Building) {
-		// TODO - implement Block.add
-		throw new UnsupportedOperationException();
+
+	public void add(Building building) {
+		buildings.add(building);
+		if(buildings.size() >= 2) {
+			buildings.get(buildings.size() - 1).setBuildingID(buildings.get(buildings.size() - 2).getBuildingID() + 1);
+		}
 	}
 
-	/**
-	 * 
-	 * @param Building
-	 */
-	public void remove(int Building) {
-		// TODO - implement Block.remove
-		throw new UnsupportedOperationException();
+
+	public void remove(int buildingID)
+	{
+      for(int i=0 ; i< buildings.size() ; i++)
+	  {
+	  	if(buildings.get(i).getBuildingID() == buildingID)
+		{
+			buildings.remove(i);
+		}
+	  }
 	}
 
 }
