@@ -5,6 +5,9 @@ public class Fun extends Building {
 
 	public Fun() {
 		this.population = 50;
+		for (int i=0 ; i<this.population ; i++){
+			addPerson(new Person(true));
+		}
 		this.cost = 6000;
 		this.level = 1;
 		pointPerPerson = 1.2;

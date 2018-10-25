@@ -7,7 +7,10 @@ public class House extends Building {
 			this.floors = floors;
 			this.rooms = rooms;
 			this.level = 1;
-			this.population = this.rooms * this.floors;
+			this.population = this.rooms * this.floors * 5;
+			for (int i=0 ; i<this.population ; i++){
+				addPerson(new Person(true));
+			}
 			this.cost = addCost();
 		}
 		else {
@@ -46,6 +49,11 @@ public class House extends Building {
 		else {
 			System.out.println("not possible");
 		}
+	}
+
+	public void nextDay(){
+		for (int i =0 ; i<this.persons.length ; i++)
+			persons[i].nextDay();
 	}
 
 	public int upgradeCost(int addedUnit, int addedFloor) {
