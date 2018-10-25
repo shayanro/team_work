@@ -12,10 +12,6 @@ public class Person {
 		return isEmployed;
 	}
 
-	/**
-	 * 
-	 * @param isEmployed
-	 */
 	public void setIsEmployed(boolean isEmployed) {
 		this.isEmployed = isEmployed;
 	}
@@ -23,10 +19,6 @@ public class Person {
 		return record;
 	}
 
-	/**
-	 * 
-	 * @param record
-	 */
 	public void setRecord(int record) {
 		this.record = record;
 	}
