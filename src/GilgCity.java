@@ -75,4 +75,22 @@ public class GilgCity {
 	public void setWealth(int wealth) {
 		this.wealth = wealth;
 	}
+	public void addBlock(Block block) {
+		blocks.add(block);
+		if(blocks.size() >= 2) {
+			blocks.get(blocks.size() - 1).setBlockID(blocks.get(blocks.size() - 2).getBlockID() + 1);
+		}
+	}
+
+
+	public void removeBlock(int blockID)
+	{
+		for(int i=0 ; i< blocks.size() ; i++)
+		{
+			if(blocks.get(i).getBlockID() == blockID)
+			{
+				blocks.remove(i);
+			}
+		}
+	}
 }
