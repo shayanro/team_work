@@ -94,7 +94,7 @@ public class Block {
 	}
 
 
-	public void add(Building building) {
+	public void addBuilding(Building building) {
 		buildings.add(building);
 		if(buildings.size() >= 2) {
 			buildings.get(buildings.size() - 1).setBuildingID(buildings.get(buildings.size() - 2).getBuildingID() + 1);
@@ -102,7 +102,7 @@ public class Block {
 	}
 
 
-	public void remove(int buildingID)
+	public void removeBuilding(int buildingID)
 	{
       for(int i=0 ; i< buildings.size() ; i++)
 	  {
