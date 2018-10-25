@@ -106,10 +106,10 @@ public class Block {
 	{
       for(int i=0 ; i< buildings.size() ; i++)
 	  {
-	  	if(buildings.get(i).getBuildingID() == buildingID)
-		{
-			buildings.remove(i);
-		}
+//	  	if(buildings.get(i).getBuildingID() == buildingID)
+//		{
+//			buildings.remove(i);
+//		}
 	  }
 	}
 
