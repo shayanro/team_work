@@ -1,33 +1,32 @@
 public class Fun extends Building {
+	// private ArrayList Person;
+//    private int cap;
+	private double pointPerPerson;
 
-	private ArrayList Person;
-	private int capacity;
-
-	public ArrayList getPerson() {
-		// TODO - implement Fun.getPerson
-		throw new UnsupportedOperationException();
+	public Fun() {
+		this.population = 50;
+		this.cost = 6000;
+		this.level = 1;
+		pointPerPerson = 1.2;
 	}
 
-	/**
-	 * 
-	 * @param Person
-	 */
-	public void setPerson(ArrayList Person) {
-		// TODO - implement Fun.setPerson
-		throw new UnsupportedOperationException();
-	}
+//    public int getCapacity() {
+//        return this.population;
+//    }
+//
+//    public void setCapacity(int population) {
+//        this.population = population;
+//    }
 
-	public void getCapacity() {
-		// TODO - implement Fun.getCapacity
-		throw new UnsupportedOperationException();
+	@Override
+	public void upgrade() {
+		if (this.level == 1 || this.level == 2) {
+			this.population += 70;
+			this.cost = (this.level + 1) * 5000;
+			this.level++;
+			pointPerPerson += 0.2;
+		} else {
+			System.out.println("not possible");
+		}
 	}
-
-	/**
-	 * 
-	 * @param capacity
-	 */
-	public void setCapacity(int capacity) {
-		this.capacity = capacity;
-	}
-
 }
