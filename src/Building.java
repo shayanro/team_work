@@ -1,61 +1,75 @@
-import java.util.concurrent.Callable;
-
 public class Building {
 
-	protected String type;
-	protected String buildingID;
-	protected int population;
-	protected int level;
-	protected int cost;
+	private String type;
+	private int buildingID;
+	private int population;
+	private int level;
 
-	public Building(){
-
+	public void getType() {
+		// TODO - implement Building.getType
+		throw new UnsupportedOperationException();
 	}
 
-	public void setCost(int cost){
-		this.cost=cost;
+	/**
+	 * 
+	 * @param type
+	 */
+	public void setType(int type) {
+		// TODO - implement Building.setType
+		throw new UnsupportedOperationException();
 	}
 
-	public int getCost(){
-		return this.cost;
+	public void getBuildingID() {
+		// TODO - implement Building.getBuildingID
+		throw new UnsupportedOperationException();
 	}
 
-	public String getType() {
-		return this.type;
-	}
-
-	public void setType(String type) {
-		this.type=type;
-	}
-
-	public String getBuildingID() {
-		return this.buildingID;
-	}
-
-	public void setBuildingID(String buildingID) {
+	/**
+	 * 
+	 * @param buildingID
+	 */
+	public void setBuildingID(int buildingID) {
 		this.buildingID = buildingID;
 	}
 
-	public int getPopulation() {
-		return this.population;
+	public void getPopulation() {
+		// TODO - implement Building.getPopulation
+		throw new UnsupportedOperationException();
 	}
 
-
+	/**
+	 * 
+	 * @param population
+	 */
 	public void setPopulation(int population) {
 		this.population = population;
 	}
 
 	public void upgrade() {
-
+		// TODO - implement Building.upgrade
+		throw new UnsupportedOperationException();
 	}
 
-	public int getLevel() {
-		return this.level;
+	public void getLevel() {
+		// TODO - implement Building.getLevel
+		throw new UnsupportedOperationException();
 	}
 
+	/**
+	 * 
+	 * @param level
+	 */
 	public void setLevel(int level) {
 		this.level = level;
 	}
 
+	/**
+	 * 
+	 * @param lastRoom
+	 */
+	public Building(int lastRoom) {
+		// TODO - implement Building.Building
+		throw new UnsupportedOperationException();
+	}
 
 }
