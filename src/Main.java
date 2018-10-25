@@ -6,16 +6,17 @@ public class Main {
         GilgCity[] city = new GilgCity[2];
         city[0].init();
         city[1].init();
-        boolean done = false;
-        boolean yeild = false;
-        boolean player = false;
+        int done = 0;
+        int yeild = 0;
+        int player = 0;
+        boolean end = false;
         Scanner input = new Scanner(System.in);
         while (input.hasNextLine()){
-            parseLine(input.nextLine(), player, city);
+            parseLine(input.nextLine(), player, city, end);
         }
     }
 
-    public static void parseLine(String line, boolean player, GilgCity[] city){
+    public static void parseLine(String line, int player, GilgCity[] city, boolean end){
         if (line.toLowerCase().contains("add")){
 
         }
@@ -26,7 +27,16 @@ public class Main {
 
         }
         if (line.toLowerCase().contains("see score")){
-            System.out.println(city[player]);
+            System.out.println(city[player].getPoint());
+        }
+        if (line.toLowerCase().contains("see gills")){
+            System.out.println(city[player].getWealth());
+        }
+        if (line.toLowerCase().contains("done")){
+            player = !player;
+        }
+        if (line.toLowerCase().contains("yield")){
+            end = true;
         }
     }
 }
