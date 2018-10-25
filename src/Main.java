@@ -58,7 +58,7 @@ public class Main {
             System.out.println(city[player].getWealth());
         }
         if (line.toLowerCase().contains("done")) {
-            player = !player;
+            player = -1*(player-1);
         }
         if (line.toLowerCase().contains("yield")) {
             end = true;
