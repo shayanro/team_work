@@ -1,75 +1,55 @@
+import java.util.concurrent.Callable;
+
 public class Building {
+    protected String type;
+    protected String buildingID;
+    protected int population;
+    protected int level;
+    protected int cost;
 
-	private String type;
-	private int buildingID;
-	private int population;
-	private int level;
+    public Building() {
+    }
 
-	public void getType() {
-		// TODO - implement Building.getType
-		throw new UnsupportedOperationException();
-	}
+    public void setCost(int cost) {
+        this.cost = cost;
+    }
 
-	/**
-	 * 
-	 * @param type
-	 */
-	public void setType(int type) {
-		// TODO - implement Building.setType
-		throw new UnsupportedOperationException();
-	}
+    public int getCost() {
+        return this.cost;
+    }
 
-	public void getBuildingID() {
-		// TODO - implement Building.getBuildingID
-		throw new UnsupportedOperationException();
-	}
+    public String getType() {
+        return this.type;
+    }
 
-	/**
-	 * 
-	 * @param buildingID
-	 */
-	public void setBuildingID(int buildingID) {
-		this.buildingID = buildingID;
-	}
+    public void setType(String type) {
+        this.type = type;
+    }
 
-	public void getPopulation() {
-		// TODO - implement Building.getPopulation
-		throw new UnsupportedOperationException();
-	}
+    public String getBuildingID() {
+        return this.buildingID;
+    }
 
-	/**
-	 * 
-	 * @param population
-	 */
-	public void setPopulation(int population) {
-		this.population = population;
-	}
+    public void setBuildingID(String buildingID) {
+        this.buildingID = buildingID;
+    }
 
-	public void upgrade() {
-		// TODO - implement Building.upgrade
-		throw new UnsupportedOperationException();
-	}
+    public int getPopulation() {
+        return this.population;
+    }
 
-	public void getLevel() {
-		// TODO - implement Building.getLevel
-		throw new UnsupportedOperationException();
-	}
+    public void setPopulation(int population) {
+        this.population = population;
+    }
 
-	/**
-	 * 
-	 * @param level
-	 */
-	public void setLevel(int level) {
-		this.level = level;
-	}
+    public void upgrade() {
+    }
 
-	/**
-	 * 
-	 * @param lastRoom
-	 */
-	public Building(int lastRoom) {
-		// TODO - implement Building.Building
-		throw new UnsupportedOperationException();
-	}
+    public int getLevel() {
+        return this.level;
+    }
 
+    public void setLevel(int level) {
+        this.level = level;
+    }
 }
