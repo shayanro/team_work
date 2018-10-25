@@ -1,4 +1,9 @@
+import java.util.*;
+
 public class GilgCity {
+
+    int initPoint = 0;
+    int initWealth = 30000;
 
 	private int point;
 	private int population;
@@ -7,98 +12,67 @@ public class GilgCity {
 	private int unemployedPopulation;
 	private int employedPopulation;
 	private int wealth;
-	private ArrayList Block;
+	private ArrayList<Block> blocks=new ArrayList<Block>();
 
-	public void getPoint() {
-		// TODO - implement GilgCity.getPoint
-		throw new UnsupportedOperationException();
+	public void init(){
+	    setPoint(initPoint);
+	    setWealth(initWealth);
+
+    }
+
+	public int getPoint() {
+		return point;
 	}
 
-	/**
-	 * 
-	 * @param point
-	 */
 	public void setPoint(int point) {
 		this.point = point;
 	}
 
-	public void getPopulation() {
-		// TODO - implement GilgCity.getPopulation
-		throw new UnsupportedOperationException();
+	public int getPopulation() {
+		return population;
 	}
 
-	/**
-	 * 
-	 * @param population
-	 */
 	public void setPopulation(int population) {
 		this.population = population;
 	}
 
-	public void getAttackPower() {
-		// TODO - implement GilgCity.getAttackPower
-		throw new UnsupportedOperationException();
+	public int getAttackPower() {
+        return attackPower;
 	}
 
-	/**
-	 * 
-	 * @param attackPower
-	 */
 	public void setAttackPower(int attackPower) {
 		this.attackPower = attackPower;
 	}
 
-	public void getDefensePower() {
-		// TODO - implement GilgCity.getDefensePower
-		throw new UnsupportedOperationException();
+	public int getDefensePower() {
+		return defensePower;
 	}
 
-	/**
-	 * 
-	 * @param defensePower
-	 */
 	public void setDefensePower(int defensePower) {
 		this.defensePower = defensePower;
 	}
 
-	public void getUnemployedPopulation() {
-		// TODO - implement GilgCity.getUnemployedPopulation
-		throw new UnsupportedOperationException();
+	public int getUnemployedPopulation() {
+		return unemployedPopulation;
 	}
 
-	/**
-	 * 
-	 * @param unemployedPopulation
-	 */
 	public void setUnemployedPopulation(int unemployedPopulation) {
 		this.unemployedPopulation = unemployedPopulation;
 	}
 
-	public void getEmployedPopulationn() {
-		// TODO - implement GilgCity.getEmployedPopulationn
-		throw new UnsupportedOperationException();
+	public int getEmployedPopulationn() {
+		return employedPopulation;
 	}
 
-	/**
-	 * 
-	 * @param employedPopulationn
-	 */
-	public void setEmployedPopulationn(int employedPopulationn) {
-		// TODO - implement GilgCity.setEmployedPopulationn
-		throw new UnsupportedOperationException();
+	public void setEmployedPopulation(int employedPopulation) {
+		this.employedPopulation = employedPopulation;
 	}
 
-	public void getWealth() {
-		// TODO - implement GilgCity.getWealth
-		throw new UnsupportedOperationException();
+	public int getWealth() {
+		return wealth;
 	}
 
-	/**
-	 * 
-	 * @param wealth
-	 */
 	public void setWealth(int wealth) {
 		this.wealth = wealth;
 	}
-
 }

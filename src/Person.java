@@ -1,24 +1,26 @@
 public class Person {
 
-	private int isEmployed;
+	private boolean isEmployed;
 	private int record;
+	private int initRecord = 0;
 
-	public void getIsEmployed() {
-		// TODO - implement Person.getIsEmployed
-		throw new UnsupportedOperationException();
+	public void init(){
+	    setRecord(initRecord);
+    }
+
+	public boolean getIsEmployed() {
+		return isEmployed;
 	}
 
 	/**
 	 * 
 	 * @param isEmployed
 	 */
-	public void setIsEmployed(int isEmployed) {
+	public void setIsEmployed(boolean isEmployed) {
 		this.isEmployed = isEmployed;
 	}
-
-	public void getRecord() {
-		// TODO - implement Person.getRecord
-		throw new UnsupportedOperationException();
+	public int getRecord() {
+		return record;
 	}
 
 	/**
@@ -28,5 +30,17 @@ public class Person {
 	public void setRecord(int record) {
 		this.record = record;
 	}
+
+    public void increaseRecord(boolean increase) {
+        if (increase){
+            record++;
+        }
+    }
+
+    public void clearRecord(boolean clear) {
+        if (clear){
+            record = 0;
+        }
+    }
 
 }
