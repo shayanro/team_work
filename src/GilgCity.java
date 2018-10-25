@@ -14,11 +14,16 @@ public class GilgCity {
 	private int wealth;
 	private ArrayList<Block> blocks=new ArrayList<Block>();
 
-	public void init(){
-	    setPoint(initPoint);
-	    setWealth(initWealth);
 
-    }
+    public GilgCity()
+	{
+		setPoint(initPoint);
+		setWealth(initWealth);
+		for(int i=0 ; i<blocks.size() ; i++)
+		{
+			blocks.add(i,new Block());
+		}
+	}
 
 	public int getPoint() {
 		return point;
