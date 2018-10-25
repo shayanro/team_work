@@ -1,6 +1,6 @@
 public class Building {
 	protected String type;
-	protected String buildingID;
+	protected int buildingID;
 	protected int population;
 	protected int level;
 	protected int cost;
@@ -24,11 +24,11 @@ public class Building {
 		this.type = type;
 	}
 
-	public String getBuildingID() {
+	public int getBuildingID() {
 		return this.buildingID;
 	}
 
-	public void setBuildingID(String buildingID) {
+	public void setBuildingID(int buildingID) {
 		this.buildingID = buildingID;
 	}
 
