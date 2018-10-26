@@ -27,7 +27,7 @@ public class Main {
             String[] words = line.split(" ");
             if (line.toLowerCase().contains("add")) {
                 if (line.toLowerCase().contains("block")) {
-                    blockId = Integer.parseInt(words[2]);
+                    
                 }
                 if (line.toLowerCase().contains("bazaar")) {
                     blockId = Integer.parseInt(words[2]);
